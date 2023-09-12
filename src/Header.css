@@ -1,0 +1,16 @@
+/* .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+} */
+
+/* .headerLeft, .headerRight{
+    display: flex;
+    justify-content: space-around;
+} */
+
+.SearchBar{
+    display: flex;
+    align-items: center;
+}

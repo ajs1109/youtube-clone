@@ -1,0 +1,25 @@
+.sideRow:hover > .icons{
+    fill: red;
+}
+.sideRow:hover > .icons-green{
+    fill: green;
+}
+.sideRow:hover > .title{
+    font-weight: bold;
+    
+}
+.sideRow.selected > .icons{
+    fill: red;
+}
+.sideRow.selected > .icons-green{
+    fill: green;
+    font-weight: 600;
+}
+
+.sideRow.selected > .title{
+    font-weight: bold;
+}
+.sideRow.selected{
+    background-color: #d3d3d3;
+    font-size: larger;
+}
