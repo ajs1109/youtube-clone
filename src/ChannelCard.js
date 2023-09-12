@@ -1,8 +1,6 @@
 import React from "react";
-import { Avatar } from "@mui/material";
 import { Link } from "react-router-dom";
 import { demoVideoUrl } from "./constants";
-import { CheckCircle } from "@mui/icons-material";
 
 function ChannelCard({ image, title, channelId, subscribers } ) {
   return (

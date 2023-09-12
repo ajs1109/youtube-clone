@@ -1,11 +1,9 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./Header";
-import SideBar from "./SideBar";
-import Recommended from "./Recommended";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import SearchPage from "./SearchPage";
-import Feed from "./Feed";
 import ChannelDetail from "./ChannelDetail";
+import Feed from "./Feed";
+import Header from "./Header";
+import SearchPage from "./SearchPage";
 import VideoDetail from "./VideoDetail";
 
 function App() {

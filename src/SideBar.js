@@ -1,7 +1,5 @@
 import React from 'react';
-import SideRow from './SideRow';
-import './SideRow.css'
-import {Home, Whatshot, Subscriptions, VideoLibrary, History, OndemandVideo, WatchLater, ThumbUpAltOutlined, ExpandMoreOutlined} from '@mui/icons-material'
+import './SideRow.css';
 import { categories } from './constants';
 
 const SideBar = ({selectedCategory,setSelectedCategory}) => {
@@ -21,4 +19,3 @@ const SideBar = ({selectedCategory,setSelectedCategory}) => {
 
 export default SideBar
 
-{/* <Icon className='icons' sx={{ fill:'#606060'}}  /> */}

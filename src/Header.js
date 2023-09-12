@@ -1,21 +1,14 @@
-import React, { useState } from "react";
-import "./Header.css";
-import YoutubeLogo from "./components/youtube.svg";
-import { Link, Navigate, useNavigate } from "react-router-dom";
 import {
-  VideoCallOutlined,
-  MenuOutlined,
-  Search,
-  NotificationsOutlined,
-  AccountCircleOutlined,
-  Mic,
-  DarkMode,
   DarkModeOutlined,
+  Mic,
+  Search
 } from "@mui/icons-material/";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [inputSearch, setInputSearch] = useState("");
-  const [listOpen,setListOpen] = useState(false);
+  // const [listOpen,setListOpen] = useState(false);
   const navigate = useNavigate();
   const handleKeyDown = (e) => {
     if (e.key === "Enter") navigate(`/search/${inputSearch}`);
@@ -23,10 +16,9 @@ const Header = () => {
     setInputSearch(e.target.value);
   };
 
-  const handleSidebar = (e)=>{
-    setListOpen(!listOpen);
-
-  }
+  // const handleSidebar = (e)=>{
+  //   setListOpen(!listOpen);
+  // }
 
   return (
     <div className="header flex flex-row justify-between p-5 pt-2 items-center z-10 sticky top-0 bg-white">
@@ -41,6 +33,7 @@ const Header = () => {
                 width="100%"
                 height="100%"
                 className="p-0 m-0"
+                title="YouTube"
               ></iframe>
               <p className="tracking-tighter font-roboto text-2xl font-normal my-auto -mx-6">
                 YouTube
@@ -50,7 +43,7 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className="SearchBar w-[50%]">
+      <div className="flex items-center w-[50%]">
         <input
           value={inputSearch}
           onChange={(e) => setInputSearch(e.target.value)}

@@ -1,12 +1,11 @@
+import React, { useEffect, useState } from 'react';
 import SideBar from "./SideBar";
-import Recommended from "./Recommended";
-import React, { useEffect, useState } from 'react'
 import Videos from "./Videos";
 import { fetchFromAPI } from "./fetchFromAPI";
 
 const Feed = () => {
     const [videos, setVideos] = useState([]);
-    const [selectedCategory,setSelectedCategory] = useState("Library");
+    const [selectedCategory,setSelectedCategory] = useState("New");
     useEffect(() => {
       fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
         setVideos(data.items)

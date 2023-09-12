@@ -1,8 +1,6 @@
 import React from "react";
-import { Avatar } from "@mui/material";
 import { Link } from "react-router-dom";
-import { demoVideoUrl,demoThumbnailUrl } from "./constants";
-import { CheckCircle } from "@mui/icons-material";
+import { demoThumbnailUrl, demoVideoUrl } from "./constants";
 
 function VideoCard({ image, title, channel, views, timestamp, channelImage, videoId } ) {
   return (

@@ -1,9 +1,8 @@
-import { FeaturedVideoOutlined } from "@mui/icons-material";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { fetchFromAPI } from "./fetchFromAPI";
 import ReactPlayer from "react-player";
+import { Link, useParams } from "react-router-dom";
 import Videos from "./Videos";
+import { fetchFromAPI } from "./fetchFromAPI";
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);

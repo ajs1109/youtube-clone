@@ -1,7 +1,6 @@
-import React from 'react'
-import VideoCard from './VideoCard';
+import React from 'react';
 import ChannelCard from './ChannelCard';
-import { LocalDining, WatchOutlined } from '@mui/icons-material';
+import VideoCard from './VideoCard';
 import VideosLoader from './VideosLoader';
 
 const Videos = ({videos}) => {

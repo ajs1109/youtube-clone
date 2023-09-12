@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { TuneOutlined } from "@mui/icons-material";
-import ChannelRow from "./ChannelRow";
-import VideoRow from "./VideoRow";
-import { fetchFromAPI } from "./fetchFromAPI";
-import SideBar from "./SideBar";
-import Videos from "./Videos";
 import { useParams } from "react-router-dom";
+import Videos from "./Videos";
+import { fetchFromAPI } from "./fetchFromAPI";
 
 function SearchPage() {
   const [videos, setVideos] = useState([]);
