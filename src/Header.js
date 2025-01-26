@@ -1,16 +1,18 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { 
-  DarkModeOutlined, 
-  Mic, 
-  Search, 
-  YouTube as YouTubeIcon 
+import {
+  DarkModeOutlined,
+  Search,
+  YouTube as YouTubeIcon
 } from "@mui/icons-material";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useDarkMode } from "./components/DarkModeContext";
+import MicSearch from "./components/MicSearch";
 
 const Header = () => {
   const [inputSearch, setInputSearch] = useState("");
   const navigate = useNavigate();
 
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
   const handleSearch = () => {
     if (inputSearch.trim()) {
       navigate(`/search/${inputSearch}`);
@@ -23,8 +25,14 @@ const Header = () => {
     }
   };
   
+  useEffect(() => {
+    console.log(isDarkMode);
+  
+  }, [isDarkMode])
+  
+
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-white shadow-sm dark:bg-dark dark:text-white">
       <div className="flex justify-between items-center p-4">
         {/* Logo Section */}
         <Link to="/" className="flex items-center space-x-2">
@@ -50,14 +58,15 @@ const Header = () => {
               <Search />
             </button>
           </div>
-          <button className="ml-4 p-2 bg-gray-100 rounded-full hover:bg-gray-200">
+          {/* <button className="ml-4 p-2 bg-gray-100 rounded-full hover:bg-gray-200">
             <Mic />
-          </button>
+          </button> */}
+          <MicSearch/>
         </div>
 
         {/* Action Buttons */}
         <div className="flex items-center space-x-4">
-          <button className="p-2 rounded-full hover:bg-gray-100 transition-colors">
+          <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-100 transition-colors hidden">
             <DarkModeOutlined />
           </button>
         </div>
