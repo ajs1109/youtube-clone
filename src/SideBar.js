@@ -3,7 +3,6 @@ import './SideRow.css';
 import { categories } from './constants';
 
 const SideBar = ({selectedCategory,setSelectedCategory}) => {
-  console.log(selectedCategory);
   return (
     <div className='md:w-[20%] min-w-[200px] flex md:flex-col overflow-x-auto w-full scrollbar-hide'>
         {categories.map((item,idx) =>

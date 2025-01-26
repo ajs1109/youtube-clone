@@ -11,15 +11,15 @@ import GraphicEqIcon from '@mui/icons-material/GraphicEq';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
-import { AttachMoney } from '@mui/icons-material';
+import { AttachMoney, VideogameAsset } from '@mui/icons-material';
 
 export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
 
 export const categories = [
   { name: 'New', icon: <HomeIcon className='icons'/>, },
-  { name: 'Krsna', icon: <AttachMoney className='icons-green'/>, },
+  { name: 'KR$NA', icon: <AttachMoney className='icons-green'/>, },
   { name: 'Coding', icon: <CodeIcon className='icons'/>, },
-  { name: 'ReactJS', icon: <CodeIcon className='icons'/>, },
+  { name: 'Chess', icon: <VideogameAsset className='icons'/>, },
   { name: 'NextJS', icon: <CodeIcon className='icons'/>, },
   { name: 'Music', icon: <MusicNoteIcon className='icons'/> },
   { name: 'Education', icon: <SchoolIcon className='icons'/>, },

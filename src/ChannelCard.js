@@ -11,7 +11,6 @@ function ChannelCard({ image, title, channelId, subscribers } ) {
        
         <div className="videoText w-full ml-[15px]">
             <p className="text-[14px]/[22px] w-full font-medium font-roboto text-center mx-auto">{title.slice(0,60)}
-            {/* <CheckCircle className="opacity-60" sx={{width:"16px",margin:"auto"}}/> */}
             </p>
             {subscribers && <p className="text-[14px]/[22px] w-full font-medium font-roboto text-center">{parseInt(subscribers).toLocaleString()} Subscribers</p>}
         </div>

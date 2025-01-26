@@ -1,25 +1,35 @@
-.sideRow:hover > .icons{
-    fill: red;
-}
-.sideRow:hover > .icons-green{
-    fill: green;
-}
-.sideRow:hover > .title{
-    font-weight: bold;
-    
-}
-.sideRow.selected > .icons{
-    fill: red;
-}
-.sideRow.selected > .icons-green{
-    fill: green;
-    font-weight: 600;
-}
-
-.sideRow.selected > .title{
-    font-weight: bold;
-}
-.sideRow.selected{
-    background-color: #d3d3d3;
-    font-size: larger;
-}
+.sideRow {
+    @apply flex items-center py-2 px-4 cursor-pointer transition-all duration-200 ease-in-out;
+  }
+  
+  .sideRow:hover {
+    @apply bg-gray-200;
+  }
+  
+  .sideRow:hover .icons {
+    @apply text-red-500;
+  }
+  
+  .sideRow:hover .icons-green {
+    @apply text-green-500;
+  }
+  
+  .sideRow:hover .title {
+    @apply font-semibold;
+  }
+  
+  .sideRow.selected {
+    @apply bg-gray-200;
+  }
+  
+  .sideRow.selected .icons {
+    @apply text-red-500;
+  }
+  
+  .sideRow.selected .icons-green {
+    @apply text-green-500;
+  }
+  
+  .sideRow.selected .title {
+    @apply font-bold text-black;
+  }
